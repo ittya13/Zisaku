@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVPKG to MP4 Converter</title>
+</head>
+<body>
+    <input type="file" accept=".movpkg" id="movpkgFileInput">
+    <button onclick="convertMOVPKGToMP4()">Convert MOVPKG to MP4</button>
+
+    <script>
+        function convertMOVPKGToMP4() {
+            const movpkgFileInput = document.getElementById('movpkgFileInput');
+            const file = movpkgFileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(event) {
+                    // Read the MOVPKG file content
+                    const movpkgContent = event.target.result;
+
+                    // TODO: Extract the MOV file from the MOVPKG content
+
+                    // TODO: Convert the extracted MOV file to MP4
+
+                    // Once converted, you can handle the MP4 file on the client-side or provide a download link
+                    // Example: create a download link for the converted MP4
+                    const a = document.createElement('a');
+                    a.href = 'path_to_converted_mp4_file';
+                    a.download = 'converted.mp4';
+                    a.click();
+                };
+
+                reader.readAsText(file);
+            } else {
+                alert('Please select a MOVPKG file.');
+            }
+        }
+    </script>
+</body>
+</html>

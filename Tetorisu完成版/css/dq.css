@@ -1,0 +1,388 @@
+
+html, body
+{
+    height: 100%;
+    max-height: 100%;
+    margin: 0px;
+}
+body
+{
+    display: inline-block;
+    width: 100%;
+    padding: 0px;
+    border-width: 0px;
+    font-family: Arial, 'メイリオ' , 'MS UI Gothic' , 'MS PGothic' , Sans-Serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+#page
+{
+    height: 100%;
+}
+body > #page
+{
+    height: auto;
+}
+/*-----------------------------------------------------------*/
+
+textarea, input, select, option
+{
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-width: 1px;
+}
+textarea
+{
+    height: 3.5em;
+    overflow: auto;
+}
+table
+{
+    margin: 0;
+    padding: 0;
+}
+
+.dq-console
+{
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    border: 0px;
+}
+
+.dq-console .outer
+{
+    padding: 2px 4px;
+}
+
+.dq-console .command
+{
+    width: 99%;
+    margin: 2px 0;
+    padding: 0;
+}
+
+.dq-console input
+{
+    width: 100%;
+    height: 16px;
+    margin-right: -100px;
+    line-height: 16px;
+}
+
+.dq-console textarea
+{
+    width: 99%;
+    height: 100%;
+    background-color: Black;
+    color: White;
+    font-size: 0.8em;
+    overflow: auto;
+}
+
+.dq-screen
+{
+    position: relative;
+    border: 0px solid black;
+    background-color: Black;
+}
+
+.dq-map
+{
+    position: absolute;
+}
+
+.dq-map-sp
+{
+    position: relative;
+    float: left;
+    background-color: transparent;
+    overflow: hidden;
+}
+.dq-map-16px div
+{
+    width: 16px;
+    height: 16px;
+}
+.dq-map-32px div
+{
+    width: 32px;
+    height: 32px;
+}
+.dq-highlayer
+{
+    position: absolute;
+    background-color: transparent;
+}
+.dq-highlayer img
+{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+.dq-highlayer .npc48
+{
+    position: absolute;
+    width: 32px;
+    height: 48px;
+    overflow: hidden;
+}
+
+.dq-highlayer .npc32
+{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.dq-highlayer .box
+{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.dq-highlayer .door
+{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.dq-highlayer-16px
+{
+    position: absolute;
+    background-color: transparent;
+}
+
+.dq-highlayer-16px .npc
+{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+}
+
+.dq-keypad
+{
+    position: absolute;
+    width: 12em;
+    filter: alpha(opacity=50);
+    opacity: 0.50;
+    z-index: 999;
+}
+
+.dq-keypad div
+{
+    display: block;
+    float: left;
+    width: 3em;
+    height: 2.5em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    padding: 1px;
+}
+.dq-keypad div#left
+{
+    text-align: center;
+    cursor: pointer;
+}
+.dq-keypad div#right
+{
+    text-align: center;
+    cursor: pointer;
+}
+.dq-keypad div#up
+{
+    text-align: center;
+    cursor: pointer;
+}
+.dq-keypad div#down
+{
+    text-align: center;
+    cursor: pointer;
+}
+.dq-keypad .button
+{
+    background: ActiveCaption url(images/ui-bg.png) 50% 50% repeat-x;
+    cursor: pointer;
+}
+.dq-keypad .button span
+{
+    display: block;
+    margin: 1px 1px;
+    height: 2em;
+}
+
+.dq-keypad .dq-button-hover span
+{
+    margin: 0px;
+    border-style: solid;
+    border-color: Orange;
+    border-width: 1px;
+    background: #A0A0B0 url(images/ui-bg-gr.png) 0px 0px repeat-x;
+}
+.dq-info
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+}
+.dq-info div
+{
+    float: left;
+    width: 2.5em;
+    height: 1.5em;
+    background: white;
+    border: solid 1px black;
+    text-align: right;
+}
+
+.dq-grid
+{
+    border: solid 4px black;
+}
+
+.dq-disabled
+{
+    color: GrayText;
+    cursor: default;
+}
+
+.dq-disabled td, .dq-disabled th, .dq-disabled .title span
+{
+    color: GrayText;
+}
+
+.dq-groupbox
+{
+    margin: 4px;
+    padding: 4px;
+}
+
+.dq-groupbox > div
+{
+    padding: 4px;
+}
+
+.dq-hover
+{
+    background-color: ThreeDDarkShadow;
+    cursor: e-resize;
+}
+
+.dq-border-none
+{
+    border: 0;
+}
+
+.dq-border-fixedSingle
+{
+    border: solid 1px ActiveBorder;
+}
+
+.dq-cover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: Black;
+    z-index: 1998;
+}
+.dq-cover > img
+{
+    position: absolute;
+    top: 0px;
+}
+.dq-cloud
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url(images/cloud.png) 0px 0px no-repeat;
+    z-index: 298;
+}
+
+.dq-flash
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: White;
+    z-index: 2999;
+}
+
+.dq-mbox
+{
+    font-size: 18px;
+    line-height: 20px;
+    padding: 0px 8px;
+    z-index: 1999;
+}
+.dq-mbox-click
+{
+    position: absolute;
+    bottom: 0px;
+    right: 16px;
+}
+
+.dq-hint
+{
+    position: absolute;
+    font-size: 11px;
+    z-index: 3999;
+    background-color: Black;
+    border: 1px solid ActiveBorder;
+    filter: alpha(opacity=85);
+    opacity: 0.85;
+    color: White;
+    -webkit-box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.4);
+}
+#dqloading > .dq-inner
+{
+    margin: 1px;
+    border: 1px solid Gray;
+    font-size: 16px;
+    height: 6em;
+    overflow: auto;
+}
+#dqloading > div > table
+{
+    font-size: 11px;
+}
+
+#dqloading > div td
+{
+    padding-right: 1em;
+}
+
+#dqstatusbar
+{
+    color: Silver;
+    font-size: 11px;
+    height: 4em;
+}
+#dqstatusbar > div
+{
+    text-align: center;
+}
+
+.dq-hint .dq-inner
+{
+    margin: 1em 1em;
+}

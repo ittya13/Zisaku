@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Weather Demo</title>
+<meta name="robots" content="noindex , nofollow" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="common/css/common.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="weatherBg" class="weather-background">
+            <div id="canvasCloud"></div>
+            <canvas id="canvasRain"></canvas>
+            <canvas id="canvasSnow"></canvas>
+        </div>
+
+        <div class="city-wrap">
+            <div id="weather-back" class="weather-back">現在の天気予報に戻る</div>
+            <h2 id="city-name" class="city-name"></h2>
+            <div id="weather-discription" class="weather-discription"></div>
+            <div id="weather-temp" class="weather-temp big"></div>
+            <div id="weather-date" class="weather-date"></div>
+            <div class="detail-list">
+                <!-- 他の要素は省略 -->
+            </div>
+            <div class="weather-reportWrap">
+                <div id="weather-report" class="weather-report"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+    <!-- Anime.js -->
+    <script src="js/anime.min.js"></script>
+    <!-- Your script -->
+    <script src="script.js"></script>
+</body>
+</html>

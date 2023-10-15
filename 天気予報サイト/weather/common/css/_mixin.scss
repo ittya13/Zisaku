@@ -1,0 +1,421 @@
+//break-point
+//_variables.scssで$break-point-spを指定
+// pc用cssを指定
+@mixin l-pc {
+
+    @media screen and (min-width: $break-point-sp + 1px) {
+        @content;
+    }
+}
+
+// sp用cssを指定
+@mixin l-sp {
+    @media screen and (max-width: $break-point-sp) {
+        @content;
+    }
+}
+
+// font-size-mixin
+// _variables.scssで$text-base-sizeを指定
+// 使用の時はpx単位で単位を書かずに使用
+@mixin font-size($size-pc, $size-sp) {
+
+    //pc
+    @include l-pc {
+        @include font-size-mixin($size-pc);
+    }
+
+    //sp
+    @include font-size-mixin($size-sp);
+}
+
+// font-size rem表示
+@mixin font-size-mixin($size: $text-base-size) {
+    font-size: $size + px;
+    font-size: $size / $text-base-size * 1rem;
+}
+
+// font-size-sp
+// @mixin font-size-sp($size: $text-base-size) {
+//     @media all and (max-width: $break-point-sp) {
+//         font-size: $size / 960 * 100vw;
+//     }
+// }
+
+//margin-mixin
+// 単位記載して使用
+// margin４方向指定
+@mixin margin($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include margin-all-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include margin-all-mixin($size-sp);
+    }
+}
+
+// margin-y 縦共通指定
+@mixin margin-y($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include margin-y-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include margin-y-mixin($size-sp);
+    }
+}
+
+// margin-x 横共通指定
+@mixin margin-x($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include margin-x-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include margin-x-mixin($size-sp);
+    }
+}
+
+// margin-top 上指定
+@mixin margin-top($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include margin-top-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include margin-top-mixin($size-sp);
+    }
+}
+
+// margin-right 右指定
+@mixin margin-right($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include margin-right-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include margin-right-mixin($size-sp);
+    }
+}
+
+// margin-bottom 下指定
+@mixin margin-bottom($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include margin-bottom-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include margin-bottom-mixin($size-sp);
+    }
+}
+
+// margin-left 左指定
+@mixin margin-left($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include margin-left-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include margin-left-mixin($size-sp);
+    }
+}
+
+
+// margin
+@mixin margin-all-mixin($size) {
+    margin-top: $size;
+    margin-right: $size;
+    margin-bottom: $size;
+    margin-left: $size;
+}
+
+@mixin margin-y-mixin($size) {
+    margin-top: $size;
+    margin-bottom: $size;
+}
+
+@mixin margin-x-mixin($size) {
+    margin-left: $size;
+    margin-right: $size;
+}
+
+@mixin margin-top-mixin($size) {
+    margin-top: $size;
+}
+
+@mixin margin-left-mixin($size) {
+    margin-left: $size;
+}
+
+@mixin margin-bottom-mixin($size) {
+    margin-bottom: $size;
+}
+
+@mixin margin-right-mixin($size) {
+    margin-right: $size;
+}
+
+//padding-mixin
+// padding共通指定
+@mixin padding($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include padding-all-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include padding-all-mixin($size-sp);
+    }
+}
+
+// padding-y 縦共通指定
+@mixin padding-y($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include padding-y-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include padding-y-mixin($size-sp);
+    }
+}
+
+// padding-x 横共通指定
+@mixin padding-x($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include padding-x-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include padding-x-mixin($size-sp);
+    }
+}
+
+// padding-top 上指定
+@mixin padding-top($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include padding-top-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include padding-top-mixin($size-sp);
+    }
+}
+
+// padding-right 右指定
+@mixin padding-right($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include padding-right-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include padding-right-mixin($size-sp);
+    }
+}
+
+//padding-bottom 下指定
+@mixin padding-bottom($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include padding-bottom-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include padding-bottom-mixin($size-sp);
+    }
+}
+
+// padding-left 左指定
+@mixin padding-left($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include padding-left-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include padding-left-mixin($size-sp);
+    }
+}
+
+
+// padding
+@mixin padding-all-mixin($size) {
+    padding-top: $size;
+    padding-right: $size;
+    padding-bottom: $size;
+    padding-left: $size;
+}
+
+@mixin padding-y-mixin($size) {
+    padding-top: $size;
+    padding-bottom: $size;
+}
+
+@mixin padding-x-mixin($size) {
+    padding-left: $size;
+    padding-right: $size;
+}
+
+@mixin padding-top-mixin($size) {
+    padding-top: $size;
+}
+
+@mixin padding-left-mixin($size) {
+    padding-left: $size;
+}
+
+@mixin padding-bottom-mixin($size) {
+    padding-bottom: $size;
+}
+
+@mixin padding-right-mixin($size) {
+    padding-right: $size;
+}
+
+//position-mixin
+// position-top 上指定
+@mixin top($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include position-top-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include position-top-mixin($size-sp);
+    }
+}
+
+// position-right 右指定
+@mixin right($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include position-right-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include position-right-mixin($size-sp);
+    }
+}
+
+// position-bottom 下指定
+@mixin bottom($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include position-bottom-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include position-bottom-mixin($size-sp);
+    }
+}
+
+// position-left 左指定
+@mixin left($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include position-left-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include position-left-mixin($size-sp);
+    }
+}
+
+@mixin position-top-mixin($size) {
+    top: $size;
+}
+
+@mixin position-left-mixin($size) {
+    left: $size;
+}
+
+@mixin position-bottom-mixin($size) {
+    bottom: $size;
+}
+
+@mixin position-right-mixin($size) {
+    right: $size;
+}
+
+//width-mixin
+@mixin width($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include width-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include width-mixin($size-sp);
+    }
+}
+
+@mixin width-mixin($size) {
+    width: $size;
+}
+
+//height-mixin
+@mixin height($size-pc, $size-sp) {
+
+    // pc
+    @include l-pc {
+        @include height-mixin($size-pc);
+    }
+
+    // sp
+    @include l-sp {
+        @include height-mixin($size-sp);
+    }
+}
+
+@mixin height-mixin($size) {
+    height: $size;
+}

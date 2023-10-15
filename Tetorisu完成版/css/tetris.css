@@ -1,0 +1,71 @@
+
+.tetris-info {
+    z-index: 999;
+    position: absolute;
+    top: 200px;
+    left: 84px;
+    font-size: 20px;
+    color: White;
+}
+
+#info>a {
+    font-size: 14px;
+    color: White;
+}
+
+.tetris-line {
+    z-index: 999;
+    position: absolute;
+    top: 274px;
+    left: 12px;
+    width: 2em;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bolder;
+    color: White;
+}
+
+.tetris-level {
+    z-index: 999;
+    position: absolute;
+    top: 230px;
+    left: 12px;
+    width: 2em;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bolder;
+    color: White;
+}
+
+.tetris-score {
+    z-index: 999;
+    position: absolute;
+    top: 16px;
+    left: 224px;
+    width: 3em;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bolder;
+    color: Yellow;
+}
+
+.tetris-time {
+    z-index: 999;
+    position: absolute;
+    top: 200;
+    left: 84;
+    font-size: 20px;
+    color: White;
+}
+
+.tetris-debug {
+    z-index: 999;
+    border: 1px solid Silver;
+    position: absolute;
+    top: 0px;
+    left: 320px;
+    width: 320px;
+    height: 300px;
+    font-size: 16px;
+    color: Black;
+}

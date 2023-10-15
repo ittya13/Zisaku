@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Game</title>
+  <style>
+    /* Add some CSS for styling */
+    canvas {
+      border: 1px solid #000;
+      display: block;
+      margin: 0 auto;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="300" height="600"></canvas>
+  <div class="controls">
+    <button id="left-button" onclick="moveTetromino('left')">Left</button>
+    <button id="right-button" onclick="moveTetromino('right')">Right</button>
+    <button id="rotate-button" onclick="rotateTetromino()">Rotate</button>
+    <button id="down-button" onclick="moveTetromino('down')">Down</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .game-container {
+    border: 2px solid #333;
+    background-color: #fff;
+  }
+  
+  canvas {
+    display: block;
+    margin: 0 auto;
+  }
+  .button {
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: darkblue;
+  }

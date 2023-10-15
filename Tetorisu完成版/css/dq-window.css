@@ -1,0 +1,214 @@
+.dq-window
+{
+    position: absolute;
+    margin: 0px auto;
+    min-width: 4em;
+    color: #fff;
+}
+
+.dq-window .dq-footer
+{
+    background: transparent url(images/mdbox/bl.png) no-repeat 0px 0px;
+    margin-right: 15px;
+}
+
+.dq-window .dq-footer .c
+{
+    margin-right: -15px;
+    height: 15px;
+    background: transparent url(images/mdbox/br.png) no-repeat 0px 0px;
+    background-position: right bottom;
+    font-size: 1px; /* ensure minimum height */
+}
+
+.dq-window .dq-header
+{
+    margin-right: 15px;
+    background: transparent url(images/mdbox/tl.png) no-repeat 0px 0px;
+    position: static;
+    display: block;
+}
+
+.dq-window .dq-header .c
+{
+    margin-right: -15px;
+    height: 15px;
+    font-size: 1px; /* ensure minimum height */
+    background: transparent url(images/mdbox/tr.png) 0px 0px no-repeat;
+    background-position: right top;
+}
+
+.dq-window .dq-body
+{
+    position: relative;
+    padding: 0px 0px 0px 0px;
+    background: transparent url(images/mdbox/tl.png) repeat-y 0px -15px;
+    margin-right: 2px; 
+}
+
+.dq-window .dq-body .c
+{
+    position: relative;
+    margin-right: -2px; 
+    /* padding: 0px 0.5em 0px 0.5em; */
+    background: transparent url(images/mdbox/mr.png) repeat-y 0px 0px;
+    background-position: right;
+}
+
+.dq-window .dq-body .c table
+{
+}
+
+.dq-window .dq-title
+{
+    display: block;
+    position: absolute;
+    margin: 6px 1px;
+    width: 100%;
+    top: 2px;
+    left: 0px;
+    overflow: hidden;
+}
+.dq-window .dq-title span
+{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 3px;
+    margin: 0px 5px 0px 3px;
+    border-bottom: 1px solid white;
+    text-align: center;
+    vertical-align: top;
+    font-size: 100%;
+}
+.dq-window .slide-up span
+{
+    border-bottom-width: 0px;
+}
+
+.dq-msg-name
+{
+    margin: -6px 0px 0px 1em;
+    font-size: 100%;
+    overflow: hidden;
+}
+
+.dq-statebox
+{
+	overflow: hidden;
+}
+
+.dq-statebox table
+{
+	margin-top: 24px;
+	margin-left: -5px;
+	font-size: 12px;
+	width: 100%;
+    border-spacing: 0;
+    border-collapse:collapse;
+}
+
+.dq-statebox-notitle table
+{
+	margin-top: 0px;
+}
+.dq-statebox-hasfooter table
+{
+	margin-bottom: 24px;
+}
+.dq-statebox .dq-statebox-footer
+{
+    position: absolute;
+    bottom: 1px;
+    right: 1em;
+    margin-bottom: -8px;
+    width: 5em;
+}
+.dq-statebox .dq-statebox-footer td
+{
+    width: 1em;
+}
+.dq-cursor
+{
+    cursor: pointer;
+}
+
+.dq-statebox th
+{
+	text-align: right;
+	border-right: 0px solid Orange;
+}
+
+.dq-statebox td
+{
+	text-align: left;
+	border-left: 0px solid Orange;
+	line-height: 1.2em;
+}
+
+.dq-statebox span
+{
+    float: left;
+	display: block;
+	width: 16px;
+}
+
+/*
+.dq-statebox .dq-disabled td, .dq-statebox .dq-disabled th, .dq-statebox .dq-disabled span
+{
+    color: #CCC;
+}
+*/
+
+.dq-selected
+{
+	cursor: pointer;
+}
+
+.dq-selected .dq-s-s
+{
+	background: transparent url(images/dqbox/selsol.png) no-repeat 0px 0px;
+}
+
+.dq-unfocus
+{
+    color: #CCC;
+}
+
+.dq-unfocus .dq-s-s
+{
+}
+.dq-updown
+{
+    position: relative;
+}
+.dq-updown-text
+{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.dq-updown-spin
+{
+    position: absolute;
+    right: 0px;
+    width: 16px;
+    height: 20px;
+    margin-left: 1px;
+}
+.dq-updown-up
+{
+    width: 100%;
+    height: 10px;
+    border-radius: 2px;
+    background: #CCCCCC url(images/updown.png) 5px -15px no-repeat;
+    border-width: 1px;
+}
+.dq-updown-down
+{
+    width: 100%;
+    height: 10px;
+    border-radius: 2px;
+    background: #CCCCCC url(images/updown.png) 5px 2px no-repeat;
+    border-width: 1px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Game</title>
+  <link rel="stylesheet" href="start.css">
+</head>
+<body>
+  <div class="title">
+    東北電子専門学校　モバイルアプリケーション科2年
+    <br>
+    220625 神尾壱茶
+    <br>
+    制作物　テトリス風ゲーム
+  </div>
+  <button class="start-button" onclick="startGame()">ゲームスタート！</button>
+
+  <script>
+    function startGame() {
+      window.location.href = 'game.html';
+    }
+  </script>
+
+<!-- SVG -->
+<svg width="100" height="100" viewBox="0 0 100 100">
+    <defs>
+      <!-- Define mask for THINK -->
+      <mask id="thinkMask" width="100" height="100">
+        <circle cx="21" cy="48" r="19" fill="white" class="thinkMaskCircle" />
+      </mask>
+  
+      <!-- Define mask for CREATE -->
+      <mask id="createMask" width="100" height="100">
+        <circle cx="69" cy="50" r="25" fill="white" class="createMaskCircle" />
+      </mask>
+    </defs>
+  
+    <!-- Text Tetorisu -->
+    <text x="10" y="40" font-size="10" fill="#d1dce1" font-family="sans-serif">Tetorisu</text>
+  
+    <!-- Text Game -->
+    <text x="10" y="60" font-size="10" fill="#d1dce1" font-family="sans-serif">Game</text>
+  
+    <!-- Circle for ball-top -->
+    <circle class="ball-top" cx="0" cy="0" r="2" fill="#0e232e" />
+  
+    <!-- Circle for ball-bottom -->
+    <circle class="ball-bottom" cx="0" cy="0" r="2" fill="#0e232e" />
+  </svg>
+  
+</body>
+</html>

@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>天気情報</title>
-  <link rel="stylesheet" type="text/css" href="weather.css">
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Demo</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="" />
+    <!-- 他の<meta>要素はそのまま -->
+
+
 </head>
 <body>
-  <h1>今日の天気</h1>
-  <div id="todayWeather"> div>
+  <div class="container">
+    <div id="todayWeather" class="weather-info">
+      <!-- 今日の天気情報をここに表示 -->
+    </div>
 
-  <h1>週間の天気</h1>
-  <div id="weeklyWeather"></div>
+    <div id="weeklyWeather" class="weather-info">
+      <!-- 1週間の天気情報をここに表示 -->
+    </div>
+  </div>
 
+  <!-- 他のスクリプトの読み込み -->
   <script src="weather.js"></script>
 </body>
 </html>

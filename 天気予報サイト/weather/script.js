@@ -1,4 +1,4 @@
-var API_KEY = '23787320c06b88b6ca7aebb6921f3885';
+var API_KEY = '377020f44773d84f61922c6f095cb890';
 var defaultCity = 'Tokyo';
 
 function currentWeather() {

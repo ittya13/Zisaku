@@ -1,0 +1,38 @@
+/* 背景に関するスタイル */
+body {
+    background-image: url('tenki.jpeg'); /* 背景画像を指定 */
+    background-size: cover; /* 背景画像をウィンドウサイズに合わせて拡大 */
+    background-repeat: no-repeat; /* 背景画像の繰り返しを禁止 */
+    background-attachment: fixed; /* 背景画像を固定 */
+
+    /* ページ全体を中央揃えにする ↓*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/* フォントをNoto Sansに設定 */
+body, .city-name, .weather-discription, .weather-temp {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+/* 現在地と天気、温度のスタイル */
+.city-name, .weather-discription, .weather-temp {
+    text-align: center;
+}
+
+/* 天気情報の背景 */
+.weather-background {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 天気情報の背景内でアニメーションするエレメント */
+#canvasCloud, #canvasRain, #canvasSnow {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
